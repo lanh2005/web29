@@ -1,0 +1,12 @@
+.text-red {
+  color:rgb(126, 92, 68);
+}
+.font-big{
+  font-size: 50px;
+}
+
+.shadow {
+  text-shadow: 15px -5px 10px rgb(255, 80, 191);
+  font-size: 20px;
+}
+
