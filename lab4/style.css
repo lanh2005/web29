@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+img {
+    
+    max-width: 100px;
+vertical-align: middle;
+}
+.card {
+    width: 300px;
+    box-shadow: 0px 3px 5px rgba();
+    border-radius: 5px;
+}
+. card-thumbnail {
+    margin-bottom: 10px;
+}
+. card-title {
+    margin-bottom: 10px;
+}
+.card-meta {
+    border-top: 1px solid rgba();
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
