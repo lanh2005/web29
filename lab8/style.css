@@ -1,0 +1,44 @@
+*.{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.img{
+ max-width: 100%;
+ vertical-align: middle;}
+
+
+
+.section {
+    width: 280px;
+
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 15%);
+}
+
+.traveduca-life{
+    text-decoration: none;
+    color: #222;
+}
+
+
+.course-meta {
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+
+
+.course-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.cotraveduca-item img {
+    width: 100%;
+    height: 215px;
+    object-fit: cover;
+    object-position: center;
+}

@@ -1,0 +1,34 @@
+.container{
+    
+    display: flex; /*linh hoạt */
+    /* đặt hướng sắp xếp các mục nội dung */
+    flex-direction: row; /* nằm trên một hàng */
+
+
+
+    justify-content: flex-start;
+
+  align-items: stretch;
+
+  align-content: stretch;
+
+  flex-wrap: nowrap ;
+
+ height: 500px;
+ /* đặt khoảng cách tuỳ chỉnh giữa các mục nội dung*/
+   gap: 30px ;
+}
+.item{
+
+   width: 500px;
+   height: 100px;
+   background-color: blueviolet;}
+.item.epcial{
+
+    height: 200px;
+    background-color: aqua;
+    font-size: 30px;
+    line-height: 1.5;
+    order: -1; 
+    align-self: flex-start;
+}
