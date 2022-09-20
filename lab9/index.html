@@ -1,37 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deline</title>
-   
-     <style>
-      
-     </style>
-</head>
-<body>
-<div class="movie">
-    <a href="" class="movie-link">
-        <div class="btn-play">icon</div>
-        <div class="movie-thumnai">
-           <img 
-           src="https://s199.imacdn.com/vg/2022/09/13/224f4c0c5b26de74_75a5ee7788666d20_26740166306193939674.jpg" 
-           alt="RWBY: Hyousetsu Teikoku"
-           />
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Position</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
 
-        </div>
-        <div class="movie-info">
-        <h3 class="movie-title">RWBY: Hyousetsu Teikoku</h3>
-    <div class="movie-meta">
-        <div class="movie-episode">
-            Tập 9 - My dream , Your dream
-        </div>
-        <div class="movie-views">462 lượt xem</div>
-    </div>
-</div>
+            img {
+                max-width: 100%;
+                height: auto;
+                vertical-align: middle;
+            }
 
-</body>
+            .movie {
+                position: relative;
+                width: 320px;
+            }
+
+            .btn-play,
+            .movie-info {
+                position: absolute;
+            }
+
+            .btn-play {
+                top: 5px;
+                left: 5px;
+            }
+
+            .movie-info {
+                /* Kéo căng phần tử cho to bằng card */
+                left: 0;
+                right: 0;
+                /* Đặt phần tử ở vị trí mép dưới */
+                bottom: 0;
+
+                color: white;
+                padding: 30px 15px 10px;
+                background-image: linear-gradient(
+                    transparent,
+                    rgba(0, 0, 0, 0.1),
+                    rgba(0, 0, 0, 0.3),
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.7),
+                    rgba(0, 0, 0, 0.9)
+                );
+            }
+
+            .movie-title {
+                font-size: 16px;
+                font-weight: normal;
+                margin-bottom: 2px;
+            }
+
+            .movie-meta {
+                font-size: 12px;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .heart {
+                margin-top: 100px;
+                margin-left: 100px;
+                margin-bottom: 100px;
+
+                transform: rotate(45deg);
+            }
+
+            .heart,
+            .circle {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+            }
+
+            .heart {
+                position: relative;
+            }
+
+            /* Áp dụng CSS khi phần tử này được di chuột qua */
+            .heart:hover {
+                background-color: green;
+            }
+
+            /* Áp dụng CSS cho phần tử con, khi phần tử cha được hover qua */
+            .heart:hover .circle {
+                background-color: green;
+            }
+
+            .heart:hover .name {
+                color: purple;
+            }
+
+            .circle {
+                border-radius: 50%;
+                position: absolute;
+            }
+
+            .circle.top {
+                bottom: 50px;
+            }
+
+            .circle.left {
+                right: 50px;
+            }
+
+            .name {
+                position: absolute;
+                z-index: 1;
+                transform: rotate(-45deg);
+                top: 28px;
+                left: 8px;
+                font-size: 20px;
+                color: yellow;
+                text-shadow: 0 0 10px white;
+            }
+
+            .container {
+                max-width: 960px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .nav {
+                background-color: rgb(157, 157, 255);
+                padding-bottom: 4px;
+            }
+
+            .menu {
+                display: flex;
+                list-style: none;
+                background-color: rgb(39, 55, 78);
+            }
+
+            .menu-item {
+                flex-grow: 1;
+                position: relative;
+            }
+
+            .menu-link {
+                display: block;
+                padding: 15px 20px;
+                text-transform: uppercase;
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .menu-link.active {
+                background-color: rgb(157, 157, 255);
+            }
+
+            .menu-item:hover .menu-link {
+                background-color: rgb(157, 157, 255);
+            }
+
+            .menu-item:hover .sub-menu {
+                display: block;
+            }
+
+            .sub-menu {
+                display: none;
+                position: absolute;
+                background-color: white;
+                list-style: none;
+                top: 100%;
+                left: 0;
+                box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+
+            .sub-item {
+                position: relative;
+            }
+
+            .sub-item:hover .sub-link {
+                background-color: rgb(157, 157, 255);
+                color: white;
+            }
+
+            .sub-item:hover .sub-sub-menu {
+                display: block;
+            }
+
+            .sub-link {
+                display: block;
+                padding: 15px 50px 15px 20px;
+                white-space: nowrap;
+                color: rgba(0, 0, 0, 0.5);
+                text-decoration: none;
+            }
+
+            .triangle {
+                position: absolute;
+                bottom: 100%;
+                left: 18px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 10px 10px 10px;
+                border-color: transparent transparent white transparent;
+            }
+
+            .sub-sub-menu {
+                position: absolute;
+                top: 0;
+                left: 100%;
+                display: none;
+                position: absolute;
+                background-color: white;
+                list-style: none;
+                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+
+            .sub-sub-item:hover .sub-sub-link {
+                background-color: rgb(157, 157, 255);
+                color: white;
+            }
+
+            .sub-sub-link {
+                display: block;
+                padding: 15px 50px 15px 20px;
+                white-space: nowrap;
+                color: rgba(0, 0, 0, 0.5);
+                text-decoration: none;
+            }
+
+            .left-triangle {
+                position: absolute;
+                right: 100%;
+                top: 14px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent white transparent transparent;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <nav class="nav">
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a href="" class="menu-link active">Home</a>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="" class="menu-link">About</a>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="" class="menu-link">Portfolio</a>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="" class="menu-link">Blog</a>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="" class="menu-link">Categories</a>
+
+                        <ul class="sub-menu">
+                            <li class="triangle"></li>
+                            <li class="sub-item">
+                                <a href="" class="sub-link">Sub-Menu 1</a>
+                            </li>
+
+                            <li class="sub-item">
+                                <a href="" class="sub-link">Sub-Menu 2</a>
+
+                                <ul class="sub-sub-menu">
+                                    <li class="left-triangle"></li>
+                                    <li class="sub-sub-item">
+                                        <a href="" class="sub-sub-link"
+                                            >Sub-Sub-Menu 1</a
+                                        >
+                                    </li>
+
+                                    <li class="sub-sub-item">
+                                        <a href="" class="sub-sub-link"
+                                            >Sub-Sub-Menu 2</a
+                                        >
+                                    </li>
+
+                                    <li class="sub-sub-item">
+                                        <a href="" class="sub-sub-link"
+                                            >Sub-Sub-Menu 3</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="sub-item">
+                                <a href="" class="sub-link">Sub-Menu 3</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="" class="menu-link">Contact</a>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="" class="menu-link">Sitemap</a>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="" class="menu-link">Disclaimer</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="heart">
+            <div class="circle top"></div>
+            <div class="circle left"></div>
+            <div class="name">Lan Anh</div>
+        </div>
+
+        <div class="movie">
+            <a href="" class="movie-link">
+                <div class="btn-play">▶️</div>
+
+                <div class="movie-thumbnail">
+                    <img
+                        src="https://s199.imacdn.com/vg/2022/09/13/224f4c0c5b26de74_75a5ee7788666d20_26740166306193939674.jpg"
+                        alt="RWBY: Hyousetsu Teikoku"
+                    />
+                </div>
+
+                <div class="movie-info">
+                    <h3 class="movie-title">RWBY: Hyousetsu Teikoku</h3>
+
+                    <div class="movie-meta">
+                        <div class="movie-episode">
+                            Tập 9 - My dream , Your dream
+                        </div>
+
+                        <div class="movie-views">462 lượt xem</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </body>
 </html>
+
 
         

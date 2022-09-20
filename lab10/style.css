@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.clothing-item {
+    width: 988px;
+    height: 344px;
+    margin-left: 200px;
+}
+.oder-list{
+    flex-grow: 1;
+    position: relative;
+}
+.level{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    white-space: nowrap;
+    width: 172px;
+    font-family: Roboto-Regular;
+    font-size: 13px;
+    line-height: 27px;
+    color: #757575;
+    cursor: pointer;
+}
+.sup-menu{
+    
+}
