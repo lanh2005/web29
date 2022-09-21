@@ -105,7 +105,7 @@ img{
     transform: translateY(0);
   }
 }
-.wavy-text.text {
+.wavy-text .text  {
   display: inline-block;
   animation: fly 0.8s linear 0.5s infinite normal both;
 }
@@ -131,4 +131,12 @@ img{
   animation-delay: 0s;
 }
 
-
+.wavy-text .text:nth-child(8) {
+  animation-delay: 0.15s;}
+.wavy-text .text:nth-child(9) {
+  animation-delay: 0s;}
+.wavy-text .text:nth-child(10) {
+  animation-delay: 0.1s;}
+  .wavy-text .text:nth-child(11) {
+  animation-delay: 0s;}
+  
