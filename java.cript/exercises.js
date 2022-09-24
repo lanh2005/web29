@@ -10,8 +10,8 @@ function findPerimeterOfRectangle(length, breadth) {
   return (length + breadth) * 2;
 }
 console.log(
-  "hình chữ nhật có chiều dài là 3 chều rộng là 4 thì có chu vi là",
-  findPerimeterOfRectangle(3, 4)
+  "hình chữ nhật có chiều dài là 6 chều rộng là 8 thì có chu vi là",
+  findPerimeterOfRectangle(6, 8)
 );
 /**
  * Tính diện tích hình chữ nhật
@@ -24,7 +24,7 @@ console.log(
 function findAreaOfRectangle(length, breadth) {
   return length * breadth;
 }
-console.log("Diện tích hình chữ nhật là", findAreaOfRectangle(3, 4));
+console.log("Diện tích hình chữ nhật là", findAreaOfRectangle(6, 8));
 
 /**
  * Tìm đường kính hình tròn
@@ -36,7 +36,7 @@ console.log("Diện tích hình chữ nhật là", findAreaOfRectangle(3, 4));
 function findDiameterOfCircle(r) {
   return r;
 }
-console.log("đường kính hình tròn là", findDiameterOfCircle(2 * 2));
+console.log("đường kính hình tròn là", findDiameterOfCircle(4 * 2));
 /**
  * Tìm chu vi hình tròn
  *
@@ -49,7 +49,7 @@ console.log("đường kính hình tròn là", findDiameterOfCircle(2 * 2));
 function findCircumferenceOfCircle(r) {
   return r;
 }
-console.log("chu vi hình tròn là", findCircumferenceOfCircle(3 * 3.14));
+console.log("chu vi hình tròn là", findCircumferenceOfCircle(6 * 3.14));
 
 /**
  * Tìm diện tích hình tròn
@@ -65,7 +65,7 @@ console.log("chu vi hình tròn là", findCircumferenceOfCircle(3 * 3.14));
 function findAreaOfCircle(r) {
   return r * 2;
 }
-console.log("diện tích hình tròn là", findAreaOfCircle(4 * 3.14));
+console.log("diện tích hình tròn là", findAreaOfCircle(6 * 3.14));
 
 /**
  * Tính diện tích hình tam giác theo công thức Heron
@@ -82,7 +82,7 @@ function findAreaOfTriangle(a, b, c) {
   return ((a + b + c) * (a + b - c) * (b + c - a) * (c + a - b)) / 4;
 }
 
-console.log("diện tích hình tam giác", findAreaOfCircle(5, 5, 5));
+console.log("diện tích hình tam giác", findAreaOfCircle(8, 8, 8));
 
 /**
  * Chuyển đổi nhiệt ở ở thang nhiệt Celsius sang Fahrenheit
@@ -94,6 +94,6 @@ console.log("diện tích hình tam giác", findAreaOfCircle(5, 5, 5));
  * @return {number} Nhiệt độ ở thang nhiệt Fahrenheit
  */
 function celsiusToFahrenheit(temp) {
-  return temp * 1.8 + 32;
+  return temp * 1.8 + 23;
 }
 console.log("nhiệt độ ở thang nhiệt Fahrenheit là", celsiusToFahrenheit(4));
