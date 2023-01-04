@@ -1,99 +1,94 @@
-// **
-//  * Tính chu vi hình chữ nhật
-//  *
-//  * @param {number} length Chiều dài hình chữ nhật
-//  * @param {number} breadth Chiều rộng hình chữ nhật
-//  *
-//  * @return {number} Chu vi hình chữ nhật
-//  */
-function findPerimeterOfRectangle(length, breadth) {
-  return (length + breadth) * 2;
+// bài 1
+//Viết function truyền vào 1 chuỗi bất kỳ, hãy sao chép chuỗi đó lên 10 lần.
+function repeatString(str) {
+  var str;
+  let loopResult = "";
+  for (let i = 0; i < 10; i++) {
+    loopResult += str;
+  }
+  return loopResult;
 }
-console.log(
-  "hình chữ nhật có chiều dài là 6 chều rộng là 8 thì có chu vi là",
-  findPerimeterOfRectangle(6, 8)
-);
-/**
- * Tính diện tích hình chữ nhật
- *
- * @param {number} length Chiều dài hình chữ nhật
- * @param {number} breadth Chiều rộng hình chữ nhật
- *
- * @return {number} Diện tích hình chữ nhật
- */
-function findAreaOfRectangle(length, breadth) {
-  return length * breadth;
-}
-console.log("Diện tích hình chữ nhật là", findAreaOfRectangle(6, 8));
+console.log(repeatString("80;"));
 
-/**
- * Tìm đường kính hình tròn
- *
- * @param {number} r Bán hình hình tròn
- *
- * @return {number}  Đường kính hình tròn
- */
-function findDiameterOfCircle(r) {
-  return r;
+// bài 2
+//Viết function truyền vào 1 chuỗi bất kỳ, hãy viết hàm có tác dụng sao chép đó chuỗi lên 10 lần, ngăn cách nhau bởi dấu gạch ngang.
+function repeatSting(str) {
+  var str;
+  let loopResult = "";
+  for (let i = 0; i < 10; i++) {
+    loopResult += str + "-";
+  }
+  return loopResult;
 }
-console.log("đường kính hình tròn là", findDiameterOfCircle(4 * 2));
-/**
- * Tìm chu vi hình tròn
- *
- * Quy ước PI = 3.14
- *
- * @param {number} r Bán hình hình tròn
- *
- * @return {number} Chu vi hình tròn
- */
-function findCircumferenceOfCircle(r) {
-  return r;
-}
-console.log("chu vi hình tròn là", findCircumferenceOfCircle(6 * 3.14));
+console.log(repeatSting("a"));
 
-/**
- * Tìm diện tích hình tròn
- *
- * Quy ước PI = 3.14
- *
- * Bình phương sử dụng toán tử ** hoặc Math.pow()
- *
- * @param {number} r Bán kính hình tròn
- *
- * @return {number} Diện tích hình tròn
- */
-function findAreaOfCircle(r) {
-  return r * 2;
-}
-console.log("diện tích hình tròn là", findAreaOfCircle(6 * 3.14));
+// bai3
+//Viết function truyền vào 1 chuỗi bất kỳ và 1 số nguyên dương n > 1,
+//hãy viết hàm có tác dụng sao chép đó chuỗi lên n lần, ngăn cách nhau bởi dấu gạch ngang.
+function truyen() {}
 
-/**
- * Tính diện tích hình tam giác theo công thức Heron
- *
- * Link tham khảo công thức Heron: https://vi.wikipedia.org/wiki/C%C3%B4ng_th%E1%BB%A9c_Heron
- *
- * @param {number} a Chiều dài cạnh a
- * @param {number} b Chiều dài cạnh b
- * @param {number} c Chiều dài cạnh c
- *
- * @return {number} Diện tích hình tam giác
- */
-function findAreaOfTriangle(a, b, c) {
-  return ((a + b + c) * (a + b - c) * (b + c - a) * (c + a - b)) / 4;
+// baif 4
+function chiahet5() {
+  let n = 0;
+  for (let i = 0; i <= 100; i++) {
+    if (i % 5 == 0) {
+      n = n + i;
+    }
+    return n;
+  }
+}
+console.log(chiahet5(100));
+
+// bài 5
+// Viết function tính thể tích hình cầu, với tham số truyền vào là bán kính của hình cầu.
+function thetichmatcau(r) {
+  let PI = 3.14;
+  return (4 / 3) * PI * r * r * r;
 }
 
-console.log("diện tích hình tam giác", findAreaOfCircle(8, 8, 8));
+console.log(thetichmatcau(4));
 
-/**
- * Chuyển đổi nhiệt ở ở thang nhiệt Celsius sang Fahrenheit
- *
- * Tham khảo công thức chuyển đổi trên google
- *
- * @param {number} temp Nhiệt độ ở thang nhiệt Celsius
- *
- * @return {number} Nhiệt độ ở thang nhiệt Fahrenheit
- */
-function celsiusToFahrenheit(temp) {
-  return temp * 1.8 + 23;
+//bai 6
+//Viết hàm function vào 2 số nguyên, tính tổng tất cả các số nguyên nằm giữa chúng
+
+// bài 7
+
+function laSoNguyenTo(n) {
+  let prime = true;
+  if (n < 2) prime = false;
+  else if (n === 2) prime = true;
+  else if (n % 2 === 0) prime = false;
+  else {
+    for (let i = 3; i < n - 1; i += 2) {
+      if (n % i === 0) prime = false;
+    }
+  }
+  return prime;
 }
-console.log("nhiệt độ ở thang nhiệt Fahrenheit là", celsiusToFahrenheit(4));
+console.log(laSoNguyenTo(17));
+console.log(laSoNguyenTo(48));
+
+// bài 8
+//Cho 1 số nguyên dương bất kỳ. Viết function tính tổng tất cả các số nguyên tố mà nhỏ hơn hoặc bằng tham số truyền vào.
+function flotinhhe(n) {
+  let tong = 0;
+  for (let i = 3; i < n - 1; i += 2)
+    if (n > 3 && n % i === 0) {
+      tong = tong + n;
+    }
+  return tong;
+}
+console.log(flotinhhe(195));
+console.log(flotinhhe(70));
+
+// bài 9
+function Tong_UocSo(N) {
+  let tong = 0;
+  for (let i = 1; i <= N; i++) {
+    if (N % i == 0) tong += i;
+  }
+
+  return tong;
+}
+console.log(Tong_UocSo(15));
+console.log(Tong_UocSo(36));

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 300px;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .title {
+        margin-bottom: 0;
+      }
+      .image-box {
+        position: relative;
+      }
+      .heart {
+        animation: heart 0.5s linear 0s 1;
+      }
+      @keyframes heart {
+        from {
+          transform: translate(-50%, -50%) scale(0);
+          opacity: 1;
+        }
+        to {
+          transform: translate(-50%, -50%) scale(10);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3 class="title">Double click on image to ❤ it</h3>
+      <p class="likes">you liked <span class="times">0</span> times</p>
+      <div class="image-box">
+        <img
+          src="https://toigingiuvedep.vn/wp-content/uploads/2021/05/hinh-anh-nam-buon-chat.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+    <script src="huy.js"></script>
+  </body>
+</html>

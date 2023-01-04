@@ -10,3 +10,42 @@
   font-size: 20px;
 }
 
+// các cú pháp khai báo biến
+// cách chạy javascript trong trang web
+// các cú pháp trong biến var , let , const.
+// ccacs kiểu giữ liệu : number , boolean , null , underfined , object , funtion
+      // kiểu nguyên thuỷ - primitive
+      // kiểu tham chiếu - reference
+// toán tử gồm : số học , so sánh , logic , gán
+// cấu trúc điều khiển : if esle , switch case , for , while , try catch
+// các phương thức liên quan đến kiểu giữ liệu :
+// * Mảng :
+   // - duyệt mảng 
+   // - chỉ mục - index
+   // - truy cập giá trị theo chỉ mục 
+   // - các phương thức thêm / xoá / chèn phần tử 
+   // - các phuong thức ES6 : map , reduce , filter , foreach,find 
+   // - xử lý mảng các objects
+
+//DOM :
+// * DOM là gì ?
+// * Có thể làm gì thông qua DOM ?
+    // + Tìm kiếm 
+    // + Chỉnh sửa / lấy các thong tin về phần tử
+    // + Tạo phần tử / thêm các phần tử vào trang web
+    // + XỬ lý các sự kiện
+      // - xử lí các sự kiện trên Form
+// BOM :
+// BOM là gì ? 
+   // localstrorage
+   // sessionStrore
+   // cookie
+   // ....
+// Web API là gì ?
+   // 
+// MỘT SỐ THƯ VIỆN JAVASCRIPT
+    // * jQuery
+       // * plugins : tạo ra thành phần phức tạp ...(tìm hiểu)
+       //
+    // * Lodash
+    // * axios 
